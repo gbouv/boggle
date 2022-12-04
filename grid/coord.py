@@ -23,4 +23,4 @@ class Coord(object):
             return False
 
     def __str__(self) -> str:
-        return "[" + str(self.get_row()) + "; " + str(self.get_column()) + "]"
+        return "[{0}; {1}]".format(self.get_row(), self.get_column())

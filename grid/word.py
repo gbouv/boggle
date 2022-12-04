@@ -19,8 +19,8 @@ class Word(object):
         if len(self.__word) == 0:
             raise "Empty word is unexpected in this context"
         first_letter = self.__word[0]
-        printed_coord = "R" + str(first_letter.get_row() + 1) + "C" + str(first_letter.get_column() + 1)
-        return printed_coord + " - " + self.resolve(grid) + " (" + str(self.compute_points()) + ")"
+        printed_coord = "R{0}C{1}".format(first_letter.get_row() + 1, first_letter.get_column() + 1)
+        return "{0} - {1} ({2})".format(printed_coord, self.resolve(grid), self.compute_points())
 
     def compute_points(self) -> int:
         number_of_letters = len(self.__word)
